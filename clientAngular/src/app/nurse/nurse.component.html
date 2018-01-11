@@ -1,0 +1,24 @@
+<div id="nurseInfo">
+  <h4>Détails de {{nurseInfo.prenom}} {{nurseInfo.nom}}</h4>
+
+  Id : <input type="text" value={{modifiedInfo.id}} disabled><br/>
+  Nom : <input type="text" value={{modifiedInfo.nom}} (change)="changeModifiedInfo($event)" name="nom"><br/>
+  Prénom : <input type="text" value={{modifiedInfo.prenom}} (change)="changeModifiedInfo($event)" name="prénom"><br/>
+  Adresse : <input type="text" value={{modifiedInfo.adresse}} (change)="changeModifiedInfo($event)" name="adresse"><br/>
+  <br/>
+  <h4 id="patientsList">Patients</h4>
+
+  <table id='patientTable'><tr><th>NSS</th><th>Prénom</th><th>Nom</th><th>Adresse</th><th></th></tr>
+    <tr *ngFor="let p of nursePatients" >
+      <td> {{p.nss}} </td>
+      <td> {{p.nom}} </td>
+      <td> {{p.prenom}} </td>
+      <td> {{p.adresse}} </td>
+      <td> <button (click)="removePatient(p.nss)">X</button> </td>
+    </tr>
+  </table>
+  NSS d'un nouveau patient: <input type="text" value="" placeholder="Numéro SS" (change)="changeNewSSN($event)">
+  <button (click)="addHandlePatient()">Se charger de ce patient</button>
+  <br/>
+  <button (click)="modifyInfo()">Sauvegarder Modification(s)</button>
+</div>

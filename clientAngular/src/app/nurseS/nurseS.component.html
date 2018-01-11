@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface Infirmier(e)</title>
+    <link rel="stylesheet" href="/nurse.component.css"/>
+    <script src="/nurse.ts"></script>
+</head>
+<body>
+
+    <br/>
+    <h3>Nouvel(le) Infirmier(e)</h3>
+    <p *ngIf="errorMessage != ''">{{this.errorMessage}}</p>
+    Id : <input type="text" value="" (change)="changeModifiedInfo($event)" name="id"><br/>
+    Nom : <input type="text" value="" (change)="changeModifiedInfo($event)" name="nom"><br/>
+    Prénom : <input type="text" value="" (change)="changeModifiedInfo($event)" name="prénom"><br/>
+    Adresse : <input type="text" value="" (change)="changeModifiedInfo($event)" name="adresse"><br/>
+
+    <button (click)="addNurse()">Ajouter un infirmier(e)</button>
+    <br/>
+
+</body>
+</html>

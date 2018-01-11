@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interface Patient</title>
+    <link rel="stylesheet" href="/patient.component.css"/>
+    <script src="/patient.ts"></script>
+</head>
+<body>
+
+  <br/>
+  <h3>Nouveau Patient</h3>
+
+  Id : <input type="text" value="" (change)="changeModifiedInfo($event)" name="ssn"><br/>
+  Nom : <input type="text" value="" (change)="changeModifiedInfo($event)" name="nom"><br/>
+  Prénom : <input type="text" value="" (change)="changeModifiedInfo($event)" name="prenom"><br/>
+  Adresse : <input type="text" value="" (change)="changeModifiedInfo($event)" name="adresse"><br/>
+  Pathologie : <input type="text" value="" (change)="changeModifiedInfo($event)" name="pathologie"><br/>
+
+  <button (click)="addPatient()">Ajouter un patient</button>
+  <br/>
+
+</body>
+</html>
