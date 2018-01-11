@@ -28,7 +28,7 @@ export class CabinetMedicalService {
     );
   }
 
-  newNurse( nNurse: InfirmierInterface): void {
+  NurseS( nNurse: InfirmierInterface): void {
     const data = 'id=' + nNurse.id + '&name=' + nNurse.nom + '&forName=' + nNurse.prenom + '&adress=' /*+ nNurse.adresse*/;
     console.log('oui ?');
     this.http.post('/nurse/addOrUpdateNurse', data).toPromise().then();

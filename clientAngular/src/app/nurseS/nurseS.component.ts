@@ -29,7 +29,7 @@ export class NurseSComponent implements OnInit {
       id: '',
       prenom: '',
       nom: '',
-      photo: '',
+      //photo: '',
       patientsNSS: [],
      // adresse: ''
     };
@@ -68,15 +68,7 @@ export class NurseSComponent implements OnInit {
     if (idNotExists && allFilled) {
       this.cabinet.infirmiers.push(this.NurseS);
 
-      // let body =  JSON.stringify({
-      //   id: this.newNurse.id,
-      //   name: this.newNurse.nom,
-      //   forname: this.newNurse.prenom,
-      //   address: this.newNurse.adresse,
-      // });
-      // body = 'id=' + this.newNurse.id + '&name=' + this.newNurse.nom + '&forName=' + this.newNurse.prenom + '&adress=' + this.newNurse.adresse;
-      const body = '/' + this.NurseS.id + '/' + this.NurseS.nom + '/' + this.NurseS.prenom + '/' /*+ this.NurseS.adresse*/;
-      // console.log(body);
+      const body = '/' + this.NurseS.id + '/' + this.NurseS.nom + '/' + this.NurseS.prenom /*+ '/' + this.NurseS.adresse*/;
       this.cms.postData('/nurseS/addOrUpdateNurse' + body, body, function (n) {
       });
       this.errorMessage = '';

@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnInit, ViewEncapsulation} from '@angular/core';
-import {InfirmierInterface} from '../../../../../PCMCli/clientAngular/src/app/dataInterfaces/nurse';
-import {CabinetInterface} from '../../../../../PCMCli/clientAngular/src/app/dataInterfaces/cabinet';
-import {CabinetMedicalService} from '../../../../../PCMCli/clientAngular/src/app/cabinet-medical.service';
+import {InfirmierInterface} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/dataInterfaces/nurse';
+import {CabinetInterface} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/dataInterfaces/cabinet';
+import {CabinetMedicalService} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/cabinet-medical.service';
 
 @Component({
   selector: 'app-nurse',
@@ -30,7 +30,7 @@ export class NurseComponent implements OnInit, OnChanges {
       id: Object.assign({}, this.nurseInfo).id,
       nom: Object.assign({}, this.nurseInfo).nom,
       prenom: Object.assign({}, this.nurseInfo).prenom,
-      photo: Object.assign({}, this.nurseInfo).photo,
+      //photo: Object.assign({}, this.nurseInfo).photo,
       //adresse: Object.assign({}, this.nurseInfo).adresse,
       patientsNSS: []
     };
@@ -98,7 +98,7 @@ export class NurseComponent implements OnInit, OnChanges {
     }
   }
 
-  changeNewSSN(event: any) {
+  changeNewNSS(event: any) {
     this.newHandledPatient = event.target.value;
   }
 

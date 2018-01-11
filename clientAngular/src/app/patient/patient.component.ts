@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnInit, ViewEncapsulation} from '@angular/core';
-import {CabinetInterface} from '../../../../../PCMCli/clientAngular/src/app/dataInterfaces/cabinet';
-import {PatientInterface} from '../../../../../PCMCli/clientAngular/src/app/dataInterfaces/patient';
-import {CabinetMedicalService} from "../../../../../PCMCli/clientAngular/src/app/cabinet-medical.service";
+import {CabinetInterface} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/dataInterfaces/cabinet';
+import {PatientInterface} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/dataInterfaces/patient';
+import {CabinetMedicalService} from '.../../../../../PCMCli/cabinetClient/clientAngular/src/app/cabinet-medical.service';
 
 
 @Component({
